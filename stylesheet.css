@@ -186,5 +186,6 @@ footer{
     .menu-icon{
         display: block;
         opacity: 1;
+        margin-right:30px;
     }
 }

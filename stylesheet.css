@@ -35,7 +35,8 @@
 }
 .top-main{
     width: 50%;
-    position: relative;
+    position: absolute;
+    top: 20%;
     left:20%;
     right: 20%;
     text-align: left;
@@ -43,9 +44,10 @@
     margin-bottom: 100px;
 }
 .top-main p{
-    font-size: 23x;
+    color: rgb(254, 255, 254);
+    font-size: 27x;
     letter-spacing: 2px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .top-main h3{
     font-size: 30px;
@@ -62,6 +64,11 @@ header{
     background-color: rgb(50, 99, 96);
     color: rgb(243, 241, 231);
     height: 50px;
+    width: 100%;
+    position: fixed;
+    top:0px;
+    z-index: 10;
+
 }
 .header-logo{
     width: 124px;
@@ -86,12 +93,21 @@ header{
 .menu-icon{
     float:right;
     color: ghostwhite;
-    margin:15px 0;
+    margin:15px 0; 
+    display: none; 
+    opacity: 0.0;
+}
+#menu{
     display: none;
 }
 .message-wrapper{
     height: 180px;
     background-color: rgb(209, 209, 194);
+    
+}
+.message-item{
+    position: relative;
+    left: 10%;
 }
 .mypic img{
     width: 90px;
@@ -99,33 +115,51 @@ header{
     border-radius: 50%;
     margin: 20px 0;
     border: 2px solid #225ead;
+    box-shadow: 10px 8px 50px rgb(233, 85, 17);
 }
 
 .btn{
     padding-left: 10px;
 }
 .btn:hover{
-    color: rgb(109, 218, 154);
+    color: rgb(179, 137, 58);
 }
 footer{
     height:150px ;
     background-color: rgb(155, 204, 236);
+    margin-bottom: 10px;
 }
 .footer-content{
-    text-align: center;
     color: rgb(249, 252, 249);
+    text-align: center;
+    padding-top: 10px;
 }
 .footer-logo{
+    width: 110px;
     margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
-    color: rgb(240, 123, 123);
+    color: rgb(242, 246, 248);
+    border-bottom: 8px solid rgba(38, 92, 62,0.2);
+    background-color: rgb(63, 231, 195);
+    position: relative;
+    left: 45%;
     
+}
+.footer-logo:hover{
+    opacity: 0.7;
+}
+.footer-item:hover{
+    opacity: 0.7;
+    color: darkslategray;
+
 }
 //responsive
 @media(max-width:1000px){
-    .menu-icon{
+    #manu{
         display:none;
+        opacity:0.1;
+        
     }
 }
 @media(max-width:670px){
@@ -133,16 +167,24 @@ footer{
         display:none;
     }
     .top-main{
-        position: relative;
-        left: 0%;
+        position: absolute;
+        top: 10%;
+        left: 5%;
         text-align: left;
+        letter-spacing: 1px;
         
-
     }
     .top-main h1{
         font-size: 35px;
     }
     .top-main h3{
         font-size: 25px;
+    }
+    .top-main p{
+        font-size: 23;
+    }
+    .menu-icon{
+        display: block;
+        opacity: 1;
     }
 }
